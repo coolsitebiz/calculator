@@ -1,0 +1,101 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+div .container {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: min-content;
+    padding: 5px;
+    background: #333;
+    border-radius: 18px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    justify-content: center;
+}
+
+div .screenContainer {
+    display: flex;
+    grid-column-end: span 4;
+    background: #333;
+    justify-content: flex-end;
+    border-radius: 20px 20px 0px 0px;
+}
+
+div .screen {
+    margin: 5px 5px 5px 5px;
+    padding: 10px;
+    background: rgb(186, 201, 194);
+    border-radius: 18px 18px 5px 5px;
+    width: 100%;
+    border: 1px solid black;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+div .digit, .operator, .clear {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    font-weight: bold;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.digit {
+    color: #000;
+    background:  #DAF7A6;
+}
+
+.digit:hover {
+    color: #000;
+    background:  rgb(204, 245, 128);
+}
+
+.digit:active {
+    color: #000;
+    background:  rgb(243, 255, 220);
+}
+
+.operator {
+    color: #000;
+    background: #FF5733 ;
+}
+
+.operator:hover {
+    color: #000;
+    background: rgb(255, 70, 28) ;
+}
+
+.operator:active {
+    color: #000;
+    background: rgb(248, 125, 98) ;
+}
+
+.clear {
+    color:#fff;
+    background: #C70039;
+    width: 99%;
+    justify-self: center;
+    grid-column-end: span 4;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.clear:hover {
+    color:#fff;
+    background: rgb(172, 1, 49);
+}
+
+.clear:active {
+    color:#fff;
+    background: rgb(224, 12, 72);
+}
