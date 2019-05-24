@@ -30,7 +30,7 @@ div .screen {
     border-radius: 18px 18px 5px 5px;
     width: 100%;
     border: 1px solid black;
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 2em;
 }
 
@@ -43,6 +43,7 @@ div .digit, .operator, .clear {
     width: 50px;
     border: 1px solid black;
     font-weight: bold;
+    border-radius: 5px;
 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -83,10 +84,10 @@ div .digit, .operator, .clear {
 .clear {
     color:#fff;
     background: #C70039;
-    width: 99%;
+    width: 100%;
     justify-self: center;
     grid-column-end: span 4;
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 5px 5px 15px 15px;
 }
 
 .clear:hover {
