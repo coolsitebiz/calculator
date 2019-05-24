@@ -38,6 +38,8 @@ div .screen {
 .screenText {
     padding-top: 50px;
     font-size: 2em;
+    line-height: 2em;
+    color: rgba(17, 17, 17, 0.575);
 }
 
 div .digit, .operator, .clear {

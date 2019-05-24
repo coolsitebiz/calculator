@@ -4,7 +4,7 @@ function Screen(props) {
     return (
         <div className="screenContainer">
             <div className="screen">
-                <span className="screenText">1 + 2 + 3</span>
+                <span className="screenText">{props.screenText}</span>
             </div>
         </div>
     );
