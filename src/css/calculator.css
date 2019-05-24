@@ -18,7 +18,7 @@ div .container {
 
 div .screenContainer {
     display: flex;
-    justify-content: center;
+
     grid-column-end: span 4;
     background: rgb(92, 92, 92);
     border-radius: 20px 20px 5px 5px;
@@ -26,13 +26,18 @@ div .screenContainer {
 
 div .screen {
     background: rgb(186, 201, 194);
-    border-radius: 18px 18px 5px 5px;
-    margin: 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px;
     width: 95%;
     text-align: center;
+    align-self: center;
     border: 1px solid black;
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    line-height: 4em;
+}
+
+.screenText {
+    padding-top: 50px;
+    font-size: 2em;
 }
 
 div .digit, .operator, .clear {
