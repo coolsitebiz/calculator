@@ -29,16 +29,21 @@ div .screen {
     border-radius: 5px 5px 5px 5px;
     margin: 10px;
     width: 95%;
-    text-align: center;
+    text-align: right;
     align-self: center;
     border: 1px solid black;
-    line-height: 4em;
+    line-height: 2em;
 }
 
 .screenText {
-    padding-top: 50px;
+    font-size: 1em;
+    padding-right: 10px;
+    color: rgba(17, 17, 17, 0.575);
+}
+
+.screenTextBig {
     font-size: 2em;
-    line-height: 2em;
+    padding-right: 10px;
     color: rgba(17, 17, 17, 0.575);
 }
 

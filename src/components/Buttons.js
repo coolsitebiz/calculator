@@ -6,22 +6,22 @@ class Buttons extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            input: ["0"]
+            input: "0",
+            output: "0"
         }
         
     }
 
+    //need to validate statement and return error if:
+    // --multiple consec operators
+    // --non-numeric or operator content
+
     eval = event => {
         let statement = this.state.input.slice();
-        const operators = "*/-+";
-        const decimal = ".";
-        let result = 0;
-        let termOne = "";
-        let termTwo= "";
-        console.log(statement.length);
-        for(let i=0; i<statement.length; i++) {
-            console.log(statement[i]);
-        }
+        this.setState({
+            output: eval(statement)
+        })
+
     }
 
     handleClick = event => {
@@ -37,7 +37,7 @@ class Buttons extends React.Component {
     render() {
         return (
             <div className="container">
-                <Screen screenText={this.state.input}/>
+                <Screen screenText={this.state.input} screenTextBig={this.state.output}/>
                 <Button text="9" id="nine"  handleClick={this.handleClick} />
                 <Button text="8" id="eight" handleClick={this.handleClick} />
                 <Button text="7" id="seven" handleClick={this.handleClick} />
@@ -54,7 +54,7 @@ class Buttons extends React.Component {
                 <Button text="0" id="zero" handleClick={this.handleClick} />
                 <Button text="=" id="equals" handleClick={this.eval} />
                 <Button text="+" id="add" handleClick={this.handleClick} />
-                <Button text="CE" id="clear" handleClick={(e) => this.setState({input: ["0"]})} />
+                <Button text="CE" id="clear" handleClick={(e) => this.setState({input: "0", output: "0"})} />
             </div>
             
 
