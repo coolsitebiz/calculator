@@ -18,8 +18,10 @@ class Buttons extends React.Component {
 
     eval = event => {
         let statement = this.state.input.slice();
+        const result = eval(statement);
         this.setState({
-            output: eval(statement)
+            input: result.toString(),
+            output: result
         })
 
     }
@@ -37,7 +39,7 @@ class Buttons extends React.Component {
     render() {
         return (
             <div className="container">
-                <Screen screenText={this.state.input} screenTextBig={this.state.output}/>
+                <Screen id="display" screenText={this.state.input} screenTextBig={this.state.output}/>
                 <Button text="9" id="nine"  handleClick={this.handleClick} />
                 <Button text="8" id="eight" handleClick={this.handleClick} />
                 <Button text="7" id="seven" handleClick={this.handleClick} />
